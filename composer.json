@@ -1,0 +1,17 @@
+{
+  "name": "yanivgal/JRes",
+  "description": "A Slim Framework skeleton application for rapid development",
+  "keywords": ["microframework","rest","router", "psr7"],
+  "homepage": "http://github.com/yanivgal/JRes",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yaniv Gal"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "yanivgal\\": "src"
+    }
+  }
+}
