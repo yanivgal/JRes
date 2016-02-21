@@ -2,6 +2,14 @@
 
 namespace yanivgal;
 
+/**
+ * Class JRes
+ *
+ * This class represents a JSON response message.
+ * The structure of the message is implemented per OmniTI Labs describing the
+ * JSend specs.
+ * Reference: http://labs.omniti.com/labs/jsend
+ */
 class JRes
 {
     const INDEX_STATUS = 'status';
