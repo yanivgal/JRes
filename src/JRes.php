@@ -52,7 +52,7 @@ class JRes
     private $jsonpCallback;
 
     /**
-     * @param string $status self::STATUS_SUCCESS|self::STATUS_FAIL|self::STATUS_ERROR
+     * @param JRes::STATUS_SUCCESS|JRes::STATUS_FAIL|JRes::STATUS_ERROR $status
      * @param array $data
      * @param string $message
      * @param string $jsonpCallback
@@ -70,35 +70,29 @@ class JRes
     }
 
     /**
-     * @param string|null $status
-     * @return ResponseMessage|string
+     * @param JRes::STATUS_SUCCESS|JRes::STATUS_FAIL|JRes::STATUS_ERROR $status
+     * @return JRes
      */
-    public function status($status = null)
+    public function status($status)
     {
-        if (isset($status)) {
-            $this->status = $status;
-            return $this;
-        }
-        return $this->status;
+        $this->status = $status;
+        return $this;
     }
 
     /**
-     * @param array|null $data
-     * @return ResponseMessage|array|null
+     * @param array $data
+     * @return JRes
      */
-    public function data($data = null)
+    public function data(array $data)
     {
-        if (isset($data)) {
-            $this->data = $data;
-            return $this;
-        }
-        return $this->data;
+        $this->data = $data;
+        return $this;
     }
 
     /**
      * @param string $key
      * @param string $value
-     * @return ResponseMessage
+     * @return JRes
      */
     public function addData($key, $value)
     {
@@ -110,20 +104,17 @@ class JRes
 
     /**
      * @param string $message
-     * @return ResponseMessage|string|null
+     * @return JRes
      */
-    public function message($message = null)
+    public function message($message)
     {
-        if (isset($message)) {
-            $this->message = $message;
-            return $this;
-        }
-        return $this->message;
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @param string $jsonpCallback JSONP callback name
-     * @return $this
+     * @return JRes
      */
     public function jsonpCallback($jsonpCallback)
     {
