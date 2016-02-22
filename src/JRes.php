@@ -53,13 +53,13 @@ class JRes
 
     /**
      * @param JRes::STATUS_SUCCESS|JRes::STATUS_FAIL|JRes::STATUS_ERROR $status
-     * @param array $data
+     * @param array|string $data
      * @param string $message
      * @param string $jsonpCallback
      */
     public function __construct(
         $status,
-        array $data = null,
+        $data = null,
         $message = null,
         $jsonpCallback = null
     ) {
@@ -80,10 +80,10 @@ class JRes
     }
 
     /**
-     * @param array $data
+     * @param array|string $data
      * @return JRes
      */
-    public function data(array $data)
+    public function data($data)
     {
         $this->data = $data;
         return $this;
