@@ -131,7 +131,7 @@ class JRes
             case self::STATUS_SUCCESS:
                 return $this->buildResponseMessage([
                     self::INDEX_STATUS,
-                    self::INDEX_DATA
+                    self::INDEX_MESSAGE
                 ]);
             case self::STATUS_FAIL:
                 return $this->buildResponseMessage([
